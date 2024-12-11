@@ -1,0 +1,19 @@
+# spring.application.name=eurekaserver
+server:
+  port: 8761 # Puerto en el que correrá el Eureka Server
+spring:
+  application:
+    name: eureka-server # Nombre de la aplicación
+eureka:
+  client:
+    register-with-eureka: false # Este es el Servidor Eureka Server no se registra a si mismo.
+    fetch-registry: false # No necesita obtener de servicios
+  server:
+    enable-self-preservation: false
+
+# Configuración Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
